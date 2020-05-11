@@ -1,10 +1,11 @@
 % _____________________________________________________________
-% Exercice 4 : Évaporateur flash
+% Exercice 4 : Ã‰vaporateur flash
 % _____________________________________________________________
 clc;
 clear all;
+%allo
 
-% ---------- Données du problème ----------
+% ---------- DonnÃ©es du problÃ¨me ----------
 A1=4.35647;
 B1=1277.03;
 C1=237.23;
@@ -27,7 +28,7 @@ P_sat = antoine(A1,B1,C1,T);
 P = pression(x1,1-y2,P_sat,a(1));
 
 % Affichage
- fprintf('La pression totale de l''évaporateur flash est de %f bar.\n',P)
+ fprintf('La pression totale de l''Ã©vaporateur flash est de %f bar.\n',P)
 
 % ---------- Graphique ----------
 aa=[]; %matrice des activites selon la fraction molaire
@@ -37,9 +38,9 @@ for i=1:length(x11)
 end
 figure(1)
 plot(x11,aa(:,1),x11,aa(:,2))
-legend('Premier composé','Deuxième composé','Location','best')
-xlabel('Fraction molaire du composé 1')
-ylabel('Coefficient dactivité')
-title('Coefficient dactivité de chacun des composés de la solution en fonction de la fraction molaire du premier composé')
+legend('Premier composÃ©','DeuxiÃ¨me composÃ©','Location','best')
+xlabel('Fraction molaire du composÃ© 1')
+ylabel('Coefficient dactivitÃ©')
+title('Coefficient dactivitÃ© de chacun des composÃ©s de la solution en fonction de la fraction molaire du premier composÃ©')
 % ---------- CORRECTION ----------
 res = evaporateur_corr();
